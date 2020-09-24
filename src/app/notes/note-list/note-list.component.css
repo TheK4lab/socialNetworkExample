@@ -1,0 +1,21 @@
+:host {
+    display: block;
+    margin-top: 16px;
+}
+
+mat-spinner {
+    margin: auto;
+}
+
+.info-text {
+    text-align: center;
+}
+
+mat-paginator { 
+    margin-top: 16px;
+}
+
+.title {
+    text-align: center;
+    color: #3F51B5;
+}

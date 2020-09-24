@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <h1 class="title">Seems to be the time to add a note</h1><br>
+    <form [formGroup]="form" (submit)="onSaveNote()" *ngIf="!isLoading">
+        <mat-form-field>
+            <textarea 
+            matInput
+            rows="6"
+            formControlName="content"
+            placeholder="Type your note"></textarea>
+            <mat-error *ngIf="form.get('content').invalid">Please enter some content</mat-error>
+        </mat-form-field>
+        <button 
+        mat-raised-button
+        color="primary" 
+        type="submit">Save note</button>
+    </form>
+</mat-card>

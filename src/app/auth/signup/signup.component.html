@@ -1,0 +1,16 @@
+<h1 class="title">Welcome to the Social Network Example</h1>
+<h4 class="subtitle">Please, signup</h4>
+<mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
+        <mat-form-field>
+            <input matInput name="email" ngModel type="email" placeholder="Your e-mail address" #emailInput="ngModel" required>
+            <mat-error *ngIf="emailInput.invalid">Please enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="password" ngModel type="password" placeholder="Your password" #passwordIdInput="ngModel" required>
+            <mat-error *ngIf="passwordIdInput.invalid">Please enter a valid password</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" *ngIf="!isLoading">SignUp</button>
+    </form>
+</mat-card>
